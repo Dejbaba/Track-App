@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapsActivity">
+
+<fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LL"
+        android:layout_below="@id/map"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="30dp"
+        >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:text="START"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop"
+        android:text="STOP"
+        android:layout_toRightOf="@+id/start"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/distanceTV"
+        android:layout_below="@+id/LL"
+        android:layout_marginTop="60dp"
+        android:text=""
+        android:gravity="center"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calcDisc"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="Calculate Distance"/>
+
+
+</RelativeLayout>
+
