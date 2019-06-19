@@ -1,4 +1,4 @@
-package com.example.trackapp;
+package com.example.trackapp.Model;
 
 
 import androidx.room.ColumnInfo;

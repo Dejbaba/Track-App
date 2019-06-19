@@ -1,4 +1,4 @@
-package com.example.trackapp;
+package com.example.trackapp.Utils;
 
 import android.Manifest;
 import android.app.Activity;
@@ -14,11 +14,14 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
-public class GPSTracker extends Service {
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+import static android.content.Context.LOCATION_SERVICE;
+
+public class GPSTracker  {
 
     private Context mContext;
 
@@ -228,10 +231,7 @@ public class GPSTracker extends Service {
     }
 
 
-    @Override
-    public IBinder onBind(Intent arg0) {
-        return null;
-    }
+
 
 
 }

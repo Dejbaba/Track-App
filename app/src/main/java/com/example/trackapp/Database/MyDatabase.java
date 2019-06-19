@@ -1,21 +1,21 @@
-package com.example.trackapp;
+package com.example.trackapp.Database;
 
-
-import android.content.Context;
 
 import androidx.room.Database;
-import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database (entities = {Coordinate.class}, version = 1)
+import com.example.trackapp.DaoInterface.MyDao;
+import com.example.trackapp.Model.Coordinate;
+
+@Database (entities = {Coordinate.class}, version = 1, exportSchema = false)
 public abstract class MyDatabase extends RoomDatabase {
 
     public abstract MyDao myDao();
 
-    private static MyDatabase instance;
+    //private static MyDatabase instance;
 
 
-   public static MyDatabase getInstance(Context context){
+  /* public static MyDatabase getInstance(Context context){
         if (instance == null){
             instance = Room.databaseBuilder(context.getApplicationContext(),
                     MyDatabase.class, "my_database")
@@ -23,5 +23,5 @@ public abstract class MyDatabase extends RoomDatabase {
 
         }
         return instance;
-    }
+    }*/
 }

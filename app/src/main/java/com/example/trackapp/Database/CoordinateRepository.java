@@ -1,11 +1,12 @@
-package com.example.trackapp;
+package com.example.trackapp.Database;
 
 import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import androidx.lifecycle.LiveData;
-import androidx.room.Room;
+import com.example.trackapp.DaoInterface.MyDao;
+import com.example.trackapp.Database.MyDatabase;
+import com.example.trackapp.Model.Coordinate;
 
 import java.util.List;
 
@@ -22,9 +23,9 @@ public class CoordinateRepository {
 
 
     public CoordinateRepository(Application application){
-        MyDatabase database = MyDatabase.getInstance(application);
-        myDao = database.myDao();
-        coordinates = myDao.getCoordinates();
+        //MyDatabase database = MyDatabase.getInstance(application);
+        //myDao = database.myDao();
+        //coordinates = myDao.getCoordinates();
         //this.context = context;
         //myDatabase = Room.databaseBuilder(context, MyDatabase.class, "my_database").build();
        // myDao = myDatabase.myDao();
